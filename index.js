@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 app.use(cors({
-    origin: 'https://login-backend-dph4.onrender.com',
+    origin: 'http://localhost:3000',
     credentials: true, // Allow credentials (cookies)
 }));
 
