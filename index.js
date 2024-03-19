@@ -1,6 +1,8 @@
+
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -8,7 +10,6 @@ app.use(cors({
     // origin: 'http://localhost:3000',
     credentials: true, // Allow credentials (cookies)
 }));
-
 const encoded = bodyParser.urlencoded({ extended: true });
 app.use(encoded);
 app.use(cookieParser());
@@ -26,6 +27,11 @@ app.use("/", socialGoogleAuth);
 app.use("/", Auth);
 app.use("/", userRoutes);
 console.log("Ok")
+// const dirname = dirname(fileURLToPath(import.meta.url));
+app.use(express.static(path.join(__dirname, "dist")));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/dist/index.html"));
+});
 app.get('/index', (req, res) => {
     res.cookie('myCookie', 'Hello, World!', { maxAge: 900000, httpOnly: true });
     res.send("Ok");
