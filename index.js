@@ -4,11 +4,24 @@ const app = express();
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-app.use(cors());
+// app.use(cors());
 // app.use(cors({
 //     // origin: 'http://localhost:3000',
 //     credentials: true, // Allow credentials (cookies)
 // }));
+
+
+const allowedOrigins = ['http://localhost:3000', 'https://login-front-r7kh.onrender.com'];
+app.use(cors({
+    origin: function (origin, callback) {
+        // Check if the origin is in the allowed list or if it's a browser preflight request (OPTIONS)
+        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+}));
 
 const encoded = bodyParser.urlencoded({ extended: true });
 app.use(encoded);
