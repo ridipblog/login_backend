@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c904b372.css",
+    "main.js": "/static/js/main.56372bb5.js",
+    "static/js/787.e2b0a762.chunk.js": "/static/js/787.e2b0a762.chunk.js",
+    "static/media/registration.jpg": "/static/media/registration.7e1f31b9a9de343950b6.jpg",
+    "static/media/frnd-profile.jpg": "/static/media/frnd-profile.4ed339bfbd5b2f4fe78b.jpg",
+    "static/media/background.jpg": "/static/media/background.b6a1b6283e01988f07e8.jpg",
+    "index.html": "/index.html",
+    "main.c904b372.css.map": "/static/css/main.c904b372.css.map",
+    "main.56372bb5.js.map": "/static/js/main.56372bb5.js.map",
+    "787.e2b0a762.chunk.js.map": "/static/js/787.e2b0a762.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c904b372.css",
+    "static/js/main.56372bb5.js"
+  ]
+}
