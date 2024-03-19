@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "sql6691876",
-    "password": "sjNcMvJeif",
-    "database": "sql6691876",
-    "host": "sql6.freemysqlhosting.net",
+    "username": "u697545776_social",
+    "password": "@in@?8e~K5*o",
+    "database": "u697545776_login_model",
+    "host": "srv948.hstgr.io",
     "dialect": "mysql",
     "logging": false
   },
