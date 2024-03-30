@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "u697545776_social",
-    "password": "@in@?8e~K5*o",
-    "database": "u697545776_login_model",
-    "host": "srv948.hstgr.io",
+    "username": "root",
+    "password": null,
+    "database": "login_model",
+    "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },

@@ -20,12 +20,14 @@ const profile = require('./routes/ProfileRoute');
 const socialGoogleAuth = require('./routes/GoogleAuth');
 const Auth = require('./routes/AuthRoute');
 const userRoutes = require('./routes/UsersRoute');
+const uploadFiles = require('./routes/UploadFilesRoute');
 app.use("/", registration);
 app.use("/", login);
 app.use("/", profile);
 app.use("/", socialGoogleAuth);
 app.use("/", Auth);
 app.use("/", userRoutes);
+app.use("/", uploadFiles);
 console.log("Ok")
 // const dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, "dist")));
